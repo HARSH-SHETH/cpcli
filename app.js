@@ -2,26 +2,9 @@
 const argv = require('minimist')(process.argv.slice(2));
 const pkg = require('./package.json');
 const https = require('https');
+const anonymous_api = require('./routes/api_call.js');
+const auth_api = require('./routes/auth_api_call.js');
 
-https.get('https://codeforces.com/api/contest.list?gym=false', function(res){
-  if(err){
-    console.log("harsh");
-    process.exit(1);
-  }
-  console.log("status code: ", res.statusCode);
-  let data = '';
-  res.on('data', (chunk) => {
-    data += chunk;
-  });
+anonymous_api.getContest('https://codeforces.com/api/contest.list?gym=false');
+console.log(argv);
 
-  res.on('end', () => {
-    data = JSON.parse(data);
-    let results = data.result;
-    results.forEach(function(contest){
-      if(contest.phase == "BEFORE"){
-        console.log(contest.name);
-      }
-    });
-
-  });
-});
