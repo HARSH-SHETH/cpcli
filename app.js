@@ -6,5 +6,4 @@ const anonymous_api = require('./routes/api_call.js');
 const auth_api = require('./routes/auth_api_call.js');
 
 anonymous_api.getContest('https://codeforces.com/api/contest.list?gym=false');
-console.log(argv);
 

@@ -4,11 +4,13 @@
   "description": "App for getting contest information and registration",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Coder_H",
   "license": "MIT",
   "dependencies": {
+    "chalk": "^4.1.0",
     "minimist": "^1.2.5"
   }
 }
