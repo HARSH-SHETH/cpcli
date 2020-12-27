@@ -1,1 +1,2 @@
-#Command Line App to get Codeforces Contests
+# CPCLI
+## A simple command line app to get upcoming codeforces contest.
