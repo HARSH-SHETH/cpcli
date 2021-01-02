@@ -35,7 +35,7 @@ anonymous_api.getContest = function(url){
           const date = new Date(Number(contest.startTimeSeconds) * 1000);
           const duration = Number(contest.durationSeconds) / 3600;  // CONVERT INTO HOURS;
           console.log(`[${chalk.blue(i+1)}] ${chalk.green(contest.name)}\n`);
-          console.log(`    ${chalk.green("-> Contest Type:")} ${chalk.magenta(contest.type)}\n    ${chalk.green("-> Contest Duration:")} ${chalk.magenta(duration, "hours")} \n    ${chalk.green('-> Begins at:')} ${chalk.magenta(date)}\n`);
+          console.log(chalk.green("-> Contest Type:") + chalk.magenta(contest.type) + "\n" + chalk.green("-> Contest Duration:") + chalk.magenta(duration, "hours") + "\n" + chalk.green('-> Begins at:') + chalk.magenta(date) + "\n");
         }
       });
     }else{
